@@ -71,3 +71,8 @@ square.(A)
 #
 # This is equivalent to the square of each element in the matrix A
 ```
+
+## Challenges
+
+- Create a function that returns n fibonnaci numbers in a sequence.
+- Write a custom function to calculate the factorial of a number.
