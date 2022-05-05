@@ -34,3 +34,30 @@ plotlyjs()
 using Pkg
 Pkg.add("PlotlyJs")
 ```
+
+## Creating Subplots
+
+- Set plots to variable names.
+- Use the `plot()` function with the plots variable names as arguments to create the subplots.
+- `layout` is an optional argument of `plot()` that can be used to set the layout of the subplots.
+  - It takes a tuple as an argument.
+  - (x, y) where x = number of rows and y = number of columns.
+
+```julia
+
+E.g.
+
+```julia
+p1 = plot(x, x)
+p2 = plot(x, x.^2)
+p3 = plot(x, x.^3)
+p4 = plot(x, x.^4)
+plot(p1, p2, p3, p4, layout=(2,2))
+```
+
+## Things To Note
+
+- If you want to flip the x-values (show in reverse order), use the `xflip!()` function.
+- `xlabel!()` and `ylabel!()` are used to set the x- and y-axis labels.
+- `title!()` is used to set the title of the graph.
+- `legend=false` is used to hide the legend.
