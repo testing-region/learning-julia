@@ -43,8 +43,6 @@ Pkg.add("PlotlyJs")
   - It takes a tuple as an argument.
   - (x, y) where x = number of rows and y = number of columns.
 
-```julia
-
 E.g.
 
 ```julia
