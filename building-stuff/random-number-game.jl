@@ -9,11 +9,13 @@ println("-"^40)
 
 # get guessed number from user
 function input()
-    print("Guess a number between 1 and 25: ")
+    print("Guess a number between 1 and 15: ")
     guess = parse(Int, readline())
     return guess
 end
 
+# keep scores in a variable
+score = 0
 
 # start game function
 function start(number)
@@ -28,6 +30,7 @@ function start(number)
             println("Too high, try again!\n")
             counter += 1
         else
+            global score += 1
             println("\nYou guessed correctly!, Good job!")
             println("It took you $counter tries\n")
             break
@@ -42,7 +45,7 @@ end
 
 # run the game in a loop till the user wants to quit the game
 while true
-    number = rand(1:25)
+    number = rand(1:15)
     start(number)
     print("Do you want to play again? [yes/No]: ")
     option = readline()
@@ -51,7 +54,7 @@ while true
     if option == "yes"
         continue
     else
-        # println("Your score is $score")
+        println("Your score is $score, hope you had fun.")
         println("Sorry to see you go...")
         println("Thanks for playing!!!")
         break
