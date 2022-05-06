@@ -4,7 +4,7 @@
 println("-"^40)
 println("This is number guessing game")
 println("Let's see how good you are at this")
-println("You have 5 tries, Good Luck!!!")
+println("[!] You have 5 tries, Good Luck!!!")
 println("-"^40)
 
 # track the number of games won
