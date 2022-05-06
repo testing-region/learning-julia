@@ -7,6 +7,29 @@ println("Let's see how good you are at this")
 println("You have 5 tries, Good Luck!!!")
 println("-"^40)
 
+function levels()
+    println("Choose a level")
+    println("-"^20)
+    println("1. Easy [1 - 10]")
+    println("2. Medium [1 - 25]")
+    println("3. Hard [1 - 50]")
+    println("4. Expert [1 - 100]")
+
+    _level = parse(Int, readline())
+
+    if _level == 1
+        number = rand(1:10)
+    elseif _level == 2
+        number == rand(1:25)
+    elseif _level == 3
+        number == rand(1:50)
+    elseif _level == 4
+        number = rand(1:100)
+    end
+    
+    return number
+end
+
 # get guessed number from user
 function input()
     print("Guess a number between 1 and 15: ")
@@ -45,7 +68,7 @@ end
 
 # run the game in a loop till the user wants to quit the game
 while true
-    number = rand(1:15)
+    number = levels()
     start(number)
     print("Do you want to play again? [yes/No]: ")
     option = readline()
