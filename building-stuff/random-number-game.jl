@@ -7,6 +7,13 @@ println("Let's see how good you are at this")
 println("You have 5 tries, Good Luck!!!")
 println("-"^40)
 
+# track the number of games won
+games_won = 0
+
+# store the number of games played
+games_played = 1
+
+# add game levels
 function levels()
     println("Choose a level")
     println("-"^20)
@@ -43,9 +50,6 @@ function input(msg)
     return guess
 end
 
-# keep scores in a variable
-score = 0
-
 # start game function
 function start(number, msg)
     counter = 0
@@ -58,7 +62,7 @@ function start(number, msg)
         elseif guess > number
             println("Too high, try again!\n")
         else
-            global score += 1
+            global games_won += 1
             println("\nYou guessed correctly!, Good job!")
             println("It took you $counter tries\n")
             break
@@ -80,9 +84,11 @@ while true
     println("")
     
     if option == "yes"
+        global games_played += 1
         continue
     else
-        println("Your score is $score, hope you had fun.")
+        println("You played $games_played games")
+        println("You won $games_won, hope you had fun.")
         println("Sorry to see you go...")
         println("Thanks for playing!!!")
         break
