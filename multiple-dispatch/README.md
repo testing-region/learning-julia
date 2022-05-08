@@ -41,8 +41,8 @@ Sample: Try to concatenate strings using `+`.
 ## Multiple Dispatch On Custom Functions
 
 ```julia
-whatType(x, y) = println("This is any type")
-whatType(x::Int64, y::Float64) = println("This is an integer and a float")
-whatType(x::Int64, y::Int64) = println("These are two integers")
-whatType(x::Float64, y::Float64) = println("These are two floats")
+whatType(x, y) = println("This is any type")  # called when a type is not specified
+whatType(x::Int64, y::Float64) = println("This is an integer and a float")  # called when an integer and float are specified
+whatType(x::Int64, y::Int64) = println("These are two integers")   # called when two integers are specified
+whatType(x::Float64, y::Float64) = println("These are two floats")  # called when two floats are specified
 ```
