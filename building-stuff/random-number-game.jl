@@ -33,7 +33,7 @@ function levels()
         number = rand(1:25)
         msg = "Guess a number between 1 and 25: "
     elseif _level == 3
-        number == rand(1:50)
+        number = rand(1:50)
         msg = "Guess a number between 1 and 50: "
     elseif _level == 4
         number = rand(1:100)
